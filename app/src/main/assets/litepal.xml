@@ -2,9 +2,9 @@
 <litepal>
 
     <dbname value="cool weather"></dbname>
-    <verson value="1"></verson>
+    <version value="3"></version>
     <list>
-        <mapping class="com.example.a33206.coolweather.db.Province" ></mapping>
+        <mapping class="com.example.a33206.coolweather.db.Province"></mapping>
         <mapping class="com.example.a33206.coolweather.db.City"></mapping>
         <mapping class="com.example.a33206.coolweather.db.County"></mapping>
     </list>
