@@ -5,18 +5,38 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     >
+    <ImageView
+        android:id="@+id/bing_pic_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        />
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refesh"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+
+        >
+
+
 
     <ScrollView
         android:id="@+id/weather_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
         android:overScrollMode="never"
         android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:fitsSystemWindows="true">
 
         <include layout="@layout/tittle"></include>
 
@@ -29,5 +49,13 @@
         <include layout="@layout/suggestion"></include>
         </LinearLayout>
     </ScrollView>
-
+    </android.support.v4.widget.SwipeRefreshLayout>
+        <fragment
+            android:id="@+id/choose_area_fragment"
+            android:name="com.example.a33206.coolweather.ChooseAreFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            ></fragment>
+    </android.support.v4.widget.DrawerLayout>
 </FrameLayout>

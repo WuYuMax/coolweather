@@ -85,10 +85,18 @@ public class ChooseAreFragment extends Fragment {
                 queryCounts();
                 }else if (currentLevel==Level_county){
                     String WeatherId=CountyList.get(position).getWeatherId();
-                    Intent intent=new Intent(getActivity(),WeatherActivity.class);
-                    intent.putExtra("weather_id",WeatherId);
-                    startActivity(intent);
-                    getActivity().finish();
+                    if (getActivity() instanceof  MainActivity) {
+                        Intent intent = new Intent(getActivity(), WeatherActivity.class);
+                        intent.putExtra("weather_id", WeatherId);
+                        startActivity(intent);
+                        getActivity().finish();
+                    }else if(getActivity() instanceof  WeatherActivity){
+                        WeatherActivity activity = (WeatherActivity) getActivity();
+                        activity.drawerLayout.closeDrawers();
+                        activity.swipeRefreshLayout.setRefreshing(true);
+                        activity.requestWeather(WeatherId);
+
+                    }
                 }
 
             }
