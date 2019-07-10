@@ -9,7 +9,7 @@ public class Basic  {
     public String weatherId;
     public Update update;
 
-    private class Update {
+    public class Update {
         @SerializedName("loc")
         public String updataTime;
     }

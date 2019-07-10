@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_marginTop="15dp"
+    android:layout_margin="15dp"
     >
     <TextView
         android:id="@+id/degree_text"

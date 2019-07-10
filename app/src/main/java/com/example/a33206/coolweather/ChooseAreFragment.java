@@ -1,6 +1,7 @@
 package com.example.a33206.coolweather;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -82,6 +83,12 @@ public class ChooseAreFragment extends Fragment {
                 else if (currentLevel==Level_City) {
                 SelectCity=CityList.get(position);
                 queryCounts();
+                }else if (currentLevel==Level_county){
+                    String WeatherId=CountyList.get(position).getWeatherId();
+                    Intent intent=new Intent(getActivity(),WeatherActivity.class);
+                    intent.putExtra("weather_id",WeatherId);
+                    startActivity(intent);
+                    getActivity().finish();
                 }
 
             }
@@ -91,8 +98,7 @@ public class ChooseAreFragment extends Fragment {
             public void onClick(View v) {
                 if(currentLevel==Level_county) {
                     queryCities();
-                }
-                else if(currentLevel==Level_City) {
+                }else if(currentLevel==Level_City) {
                     queryProvince();
                 }
             }

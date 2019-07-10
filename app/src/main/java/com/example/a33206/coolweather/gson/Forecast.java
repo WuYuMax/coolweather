@@ -4,19 +4,18 @@ import com.google.gson.annotations.SerializedName;
 
 import javax.xml.transform.Templates;
 
-public class daily_forecast {
-    @SerializedName("date")
+public class Forecast{
     public String date;
     @SerializedName("cond")
     public More more;
-    @SerializedName("temp")
+    @SerializedName("tmp")
     public Temperature temperature;
-    private class More {
+    public class More {
         @SerializedName("txt_d")
         public String inof;
     }
 
-    private class Temperature {
+    public class Temperature {
         public String max;
         public String min;
     }
