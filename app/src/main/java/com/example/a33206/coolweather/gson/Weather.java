@@ -1,0 +1,15 @@
+package com.example.a33206.coolweather.gson;
+
+import com.google.gson.annotations.SerializedName;
+
+import java.util.List;
+
+public class Weather {
+    public String status;
+    public Basic basic;
+    public AQI aqi;
+    public Now now;
+    public suggestion suggestion;
+    @SerializedName("daily_forcast")
+    public List<daily_forecast> forecastList;
+}

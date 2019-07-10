@@ -1,0 +1,15 @@
+package com.example.a33206.coolweather.gson;
+
+import com.google.gson.annotations.SerializedName;
+
+public class Now {
+    @SerializedName("tmp")
+    public String tmp;
+    @SerializedName("cond")
+    public More more;
+
+    private class More {
+        @SerializedName("txt")
+        public String txt;
+    }
+}
