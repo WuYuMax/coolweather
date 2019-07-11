@@ -5,11 +5,10 @@ import com.google.gson.annotations.SerializedName;
 public class Now {
     @SerializedName("tmp")
     public String tmp;
-    @SerializedName("cond")
-    public More more;
-
-    public class More {
-        @SerializedName("txt")
-        public String txt;
-    }
+    @SerializedName("cond_txt")
+    public String cond;
+    @SerializedName("hum")
+    public String shidu;
+    @SerializedName("pcpn")
+    public String jiangshui;
 }

@@ -30,6 +30,14 @@
         android:layout_marginLeft="10dp"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:background="@drawable/ic_home_black_24dp"
+        android:background="@drawable/ic_dehaze_while_24dp"
+        />
+    <Button
+        android:id="@+id/location_button"
+        android:layout_width="20sp"
+        android:layout_height="20sp"
+        android:layout_toRightOf="@id/title_city"
+        android:layout_centerVertical="true" 
+        android:background="@drawable/ic_location_on_white_24dp"
         />
 </RelativeLayout>

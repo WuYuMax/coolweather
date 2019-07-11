@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
-        android:text="空气质量"
+        android:text="湿度"
         android:textColor="#fff"
         android:textSize="20sp"
         />
@@ -32,7 +32,7 @@
             android:layout_centerInParent="true"
             >
             <TextView
-                android:id="@+id/aqi_text"
+                android:id="@+id/shidu_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" 
                 android:layout_gravity="center"
@@ -43,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" 
                 android:layout_gravity="center"
-                android:text="AQI指数"
+                android:text="相对湿度"
                 android:textColor="#fff"
                 />
 
@@ -62,7 +62,7 @@
                 android:layout_centerInParent="true"
                 >
                 <TextView
-                    android:id="@+id/pm25_text"
+                    android:id="@+id/jiangshui_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -73,7 +73,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="pm2.5指数"
+                    android:text="降水量"
                     android:textColor="#fff"
                     />
             </LinearLayout>
