@@ -72,7 +72,7 @@ public class ChooseAreFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
+        queryProvince();
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -111,7 +111,7 @@ public class ChooseAreFragment extends Fragment {
                 }
             }
         });
-        queryProvince();
+
     }
 
     private void queryProvince() {
@@ -211,7 +211,7 @@ public class ChooseAreFragment extends Fragment {
                         @Override
                         public void run() {
                             closeProgressDialog();
-                            if("Prounce".equals(type)) {
+                            if("Province".equals(type)) {
                                 queryProvince();
                             }else if ("City".equals(type)){
                                 queryCities();
